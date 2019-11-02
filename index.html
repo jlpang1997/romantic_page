@@ -12,16 +12,16 @@
         body {
             -webkit-font-smoothing: antialiased;
             font-family: Helvetica Neue, Helvetica, Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif;
-            background-image: url('雯雯.jpg');
+            background-image: url('bg.jpg');
             font-size: 85%;
             margin: 0;
         }
-        
+
         h2 {
             font-size: 220%;
             font-weight: 400;
         }
-        
+
         .content {
             position: absolute;
             width: 100%;
@@ -29,32 +29,31 @@
             transform: translate(0, -50%);
             text-align: center;
         }
-        
+
         .timer {
             font-size: 180%;
             line-height: 1.5;
             margin: 1em 0;
         }
-        
-        .timer b {
-            color: rgb(253, 99, 125);
-        }
+
+            .timer b {
+                color: rgb(253, 99, 125);
+            }
     </style>
 </head>
 
 <body>
     <div class="content">
-        <h2>呆呆，我们已经在一起了</h2>
+        <h2>雯雯，我们已经在一起了</h2>
         <div class="timer">
             <b id="d"></b> Days <b id="h"></b> Hours <b id="m"></b> Minutes <b id="s"></b> Seconds
         </div>
+        <h2>以后也会一直相爱下去的啦，爱哭鬼！</h2>
     </div>
 
     <script>
         function timer() {
-            var start = new Date(2018, 11, 10); // 2015.7.2
-            //var now = new Date();
-            //var t = now - start;
+            var start = new Date(2018, 10, 10);
             var t = new Date() - start;
             var h = ~~(t / 1000 / 60 / 60 % 24);
             if (h < 10) {
@@ -64,7 +63,6 @@
             if (m < 10) {
                 m = "0" + m;
             }
-
             var s = ~~(t / 1000 % 60);
             if (s < 10) {
                 s = "0" + s;
